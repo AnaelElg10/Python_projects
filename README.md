@@ -1,6 +1,6 @@
 # Python Projects
 
-This repository contains a collection of Python projectsduring my studies in order to gain experiences, each demonstrating different applications and games. Below is an overview of the projects included in this repository.
+This repository contains a collection of Python projects during my studies in order to gain experiences, each demonstrating different applications and games. Below is an overview of the projects included in this repository.
 
 ## Projects Overview
 
