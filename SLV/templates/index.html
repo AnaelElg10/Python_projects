@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>SpaceX Launches</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="../css/style.css"
+    />
+</head>
+<body>
+
+    <h1>SpaceX Launches</h1>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#successful">Successful</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#failed">Failed</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#upcoming">Upcoming</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="successful" class="tab-pane fade show active">
+            <h2>Successful Launches</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Flight Number</th>
+                        <th>Mission Name</th>
+                        <th>Launch Date</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for launch in launches %}
+                        {% if launch['launch_success'] %}
+                            <tr>
+                                <td>{{ launch['flight_number'] }}</td>
+                                <td>{{ launch['mission_name'] }}</td>
+                                <td>{{ launch['launch_date_utc'] }}</td>
+                                <td>{{ launch['details'] }}</td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div id="failed" class="tab-pane fade">
+            <h2>Failed Launches</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Flight Number</th>
+                        <th>Mission Name</th>
+                        <th>Launch Date</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for launch in launches %}
+                        {% if not launch['launch_success'] %}
+                            <tr>
+                                <td>{{ launch['flight_number'] }}</td>
+                                <td>{{ launch['mission_name'] }}</td>
+                                <td>{{ launch['launch_date_utc'] }}</td>
+                                <td>{{ launch['details'] }}</td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div id="upcoming" class="tab-pane fade">
+            <h2>Upcoming Launches</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Flight Number</th>
+                        <th>Mission Name</th>
+                        <th>Launch Date</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for launch in launches %}
+                        {% if launch['upcoming'] %}
+                            <tr>
+                                <td>{{ launch['flight_number'] }}</td>
+                                <td>{{ launch['mission_name'] }}</td>
+                                <td>{{ launch['launch_date_utc'] }}</td>
+                                <td>{{ launch['details'] }}</td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
