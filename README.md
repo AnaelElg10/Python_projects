@@ -20,7 +20,7 @@ A web application that provides information on SpaceX rocket launches, categoriz
 
 A simple Python application that allows users to download videos from YouTube using the `pytube` library. It features a command-line interface for inputting the YouTube video URL and selecting the save location.
 
-### PSP Game Data Management Tool
+### [PSP Game Data Management Tool](PSP/README.md)
 
 A tool designed for managing game data, including retrieving and organizing information about various games. It demonstrates file handling and data manipulation in Python.
 
