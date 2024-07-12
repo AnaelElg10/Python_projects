@@ -24,6 +24,10 @@ A simple Python application that allows users to download videos from YouTube us
 
 A tool designed for managing game data, including retrieving and organizing information about various games. It demonstrates file handling and data manipulation in Python.
 
+### [Personal Finance Tracker](PFT/README.md)
+
+A Python application designed to help users manage their personal finances. It allows users to add, view, and analyze their income and expenses over time through a simple command-line interface. The data is stored in a CSV file, making it easy to maintain and access.
+
 ## Getting Started
 
 To get started with any of these projects, you will need Python installed on your computer. Each project has its own set of prerequisites and installation instructions detailed in their respective README files.
