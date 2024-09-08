@@ -28,6 +28,10 @@ A tool designed for managing game data, including retrieving and organizing info
 
 A Python application designed to help users manage their personal finances. It allows users to add, view, and analyze their income and expenses over time through a simple command-line interface. The data is stored in a CSV file, making it easy to maintain and access.
 
+### [Solar System Visualization (SSV)](SSV/README.md)
+
+A Python application that visualizes the solar system using the Pygame library. It displays planets orbiting around the sun with their respective images and animations, providing an interactive way to learn about the solar system.
+
 ## Getting Started
 
 To get started with any of these projects, you will need Python installed on your computer. Each project has its own set of prerequisites and installation instructions detailed in their respective README files.
